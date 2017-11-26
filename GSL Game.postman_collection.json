@@ -1,0 +1,241 @@
+{
+	"info": {
+		"name": "GSL Game",
+		"_postman_id": "2fa04a40-5f51-aae3-5540-678c532c95b1",
+		"description": "Testing request to GSL Game backend system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/gslgame/v1/register",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"gslgame",
+						"v1",
+						"register"
+					]
+				},
+				"description": "Add new user to the DB. That includes User name, email address and password"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "juangrau@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pepitona",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/gslgame/v1/login",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"gslgame",
+						"v1",
+						"login"
+					]
+				},
+				"description": "Login using email and password"
+			},
+			"response": []
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "d9534c31933cdca058762efcde88237a"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost/gslgame/v1/test",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"gslgame",
+						"v1",
+						"test"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Current Question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "d9534c31933cdca058762efcde88237a"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost/gslgame/v1/getquestion",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"gslgame",
+						"v1",
+						"getquestion"
+					]
+				},
+				"description": "Get the most recent active question"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Points",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "d9534c31933cdca058762efcde88237a"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost/gslgame/v1/getpoints",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"gslgame",
+						"v1",
+						"getpoints"
+					]
+				},
+				"description": "Get the total points of a user"
+			},
+			"response": []
+		},
+		{
+			"name": "Send question answer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "d9534c31933cdca058762efcde88237a"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "answer",
+							"value": "1500",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/gslgame/v1/answer",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"gslgame",
+						"v1",
+						"answer"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of winners",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/gslgame/v1/getwinners",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"gslgame",
+						"v1",
+						"getwinners"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
